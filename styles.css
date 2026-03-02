@@ -25,18 +25,19 @@ a{color:inherit;text-decoration:none}
 
 /* Logo: bigger + crop white edges (if baked in) */
 .brand__logoWrap{
-  display:inline-block;
-  height:58px;           /* bigger */
-  width:auto;
-  overflow:hidden;       /* crops unwanted borders */
-  border-radius:12px;
+  display:flex;
+  align-items:center;
+  height:72px;              /* isompi */
+  overflow:hidden;
 }
+
 .brand__logo{
-  height:72px;           /* oversized to crop */
+  height:110px;             /* selvästi isompi */
   width:auto;
-  display:block;
-  transform:translateY(-6px); /* pulls logo up so white frame gets hidden */
-  filter: drop-shadow(0 0 18px rgba(46,167,255,.25));
+  transform:translateY(-18px); /* crop white frame pois */
+  filter:
+    drop-shadow(0 0 22px rgba(46,167,255,.35))
+    drop-shadow(0 8px 28px rgba(0,0,0,.65));
 }
 
 .lang{display:flex;gap:10px}
