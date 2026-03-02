@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BarRadar Rewards — Early Partner Spots</title>
-  <meta name="description" content="Join BarRadar Rewards as an early partner — for free. Reach nearby customers, drive traffic with Wheel of Fortune, and build loyalty with digital stamp cards." />
+  <meta name="description" content="Join BarRadar Rewards as an early partner — for free." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -14,13 +14,16 @@
   <header class="topbar">
     <div class="container topbar__inner">
       <a class="brand" href="#top" aria-label="BarRadar Rewards">
-        <img class="brand__logo" src="assets/barradar-rewards-logo.png" alt="BarRadar Rewards logo" />
+        <!-- Logo wrapper crops any unwanted white edges -->
+        <span class="brand__logoWrap">
+          <img class="brand__logo" src="assets/barradar-rewards-logo.png" alt="BarRadar Rewards logo" />
+        </span>
       </a>
 
       <nav class="lang" aria-label="Language switch">
-        <button class="lang__btn is-active" data-lang="en" aria-label="English">🇬🇧</button>
-        <button class="lang__btn" data-lang="es" aria-label="Español">🇪🇸</button>
-        <button class="lang__btn" data-lang="fi" aria-label="Suomi">🇫🇮</button>
+        <button class="lang__btn is-active" data-lang="en" aria-label="English">GB</button>
+        <button class="lang__btn" data-lang="es" aria-label="Español">ES</button>
+        <button class="lang__btn" data-lang="fi" aria-label="Suomi">FI</button>
       </nav>
     </div>
   </header>
@@ -58,11 +61,8 @@
         </div>
 
         <div class="hero__visual" aria-label="App preview">
-          <div class="phone">
+          <div class="phone phone--small">
             <img class="phone__img" src="assets/app-nearby.png" alt="BarRadar Rewards app screen" />
-            <div class="phone__caption">
-              <span class="tag" data-i18n="mock_caption">Example: Bar Malaga • Wheel + Map preview</span>
-            </div>
           </div>
         </div>
       </div>
@@ -77,7 +77,6 @@
           </p>
         </div>
 
-        <!-- Netlify Forms (with reCAPTCHA + honeypot) -->
         <form class="form"
               name="early-partner"
               method="POST"
