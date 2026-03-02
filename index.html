@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BarRadar Rewards — Early Partner Spots</title>
+  <meta name="description" content="Join BarRadar Rewards as an early partner — for free. Reach nearby customers, drive traffic with Wheel of Fortune, and build loyalty with digital stamp cards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="BarRadar Rewards">
+        <img class="brand__logo" src="assets/barradar-rewards-logo.png" alt="BarRadar Rewards logo" />
+      </a>
+
+      <nav class="lang" aria-label="Language switch">
+        <button class="lang__btn is-active" data-lang="en" aria-label="English">🇬🇧</button>
+        <button class="lang__btn" data-lang="es" aria-label="Español">🇪🇸</button>
+        <button class="lang__btn" data-lang="fi" aria-label="Suomi">🇫🇮</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__glow"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <h1 class="h1">
+            <span data-i18n="hero_title_1">Get More Paying Customers</span>
+            <span class="accent">— <span data-i18n="hero_title_2">For Free</span></span>
+          </h1>
+
+          <p class="lead" data-i18n="hero_sub">
+            Join the first 10–15 bars before launch. No contracts. No fees. Zero risk.
+          </p>
+
+          <ul class="bullets">
+            <li><span class="check">✓</span> <span data-i18n="b1">Reach nearby customers automatically</span></li>
+            <li><span class="check">✓</span> <span data-i18n="b2">Only pay the wholesale cost of a prize drink</span></li>
+            <li><span class="check">✓</span> <span data-i18n="b3">We handle everything — you do nothing</span></li>
+          </ul>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#contact" data-i18n="cta_btn">Secure your spot — FOR FREE!</a>
+            <div class="scarcity" data-i18n="scarcity">Only 15 early partner spots available</div>
+          </div>
+
+          <div class="trustline" data-i18n="trust">
+            You submit the form → I contact you → I visit your bar and set it up. Completely risk-free for you.
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-label="App preview">
+          <div class="phone">
+            <img class="phone__img" src="assets/app-nearby.png" alt="BarRadar Rewards app screen" />
+            <div class="phone__caption">
+              <span class="tag" data-i18n="mock_caption">Example: Bar Malaga • Wheel + Map preview</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact__inner">
+        <div class="contact__title">
+          <h2 class="h2" data-i18n="contact_title">Interested? I’ll Visit Your Bar Personally.</h2>
+          <p class="muted" data-i18n="contact_sub">
+            Fill out the form and I’ll contact you directly to show how it works. Completely risk-free for you.
+          </p>
+        </div>
+
+        <!-- Netlify Forms (with reCAPTCHA + honeypot) -->
+        <form class="form"
+              name="early-partner"
+              method="POST"
+              data-netlify="true"
+              data-netlify-recaptcha="true"
+              netlify-honeypot="bot-field"
+              action="/thanks.html">
+          <input type="hidden" name="form-name" value="early-partner" />
+          <p class="hidden">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="grid">
+            <label class="field">
+              <span data-i18n="f_bar">Bar name</span>
+              <input name="bar_name" type="text" required placeholder="Bar Malaga" />
+            </label>
+
+            <label class="field">
+              <span data-i18n="f_name">Your name</span>
+              <input name="name" type="text" required placeholder="Name" />
+            </label>
+
+            <label class="field">
+              <span data-i18n="f_phone">Phone</span>
+              <input name="phone" type="tel" required placeholder="+34 ..." />
+            </label>
+
+            <label class="field">
+              <span data-i18n="f_email">Email (optional)</span>
+              <input name="email" type="email" placeholder="name@bar.com" />
+            </label>
+          </div>
+
+          <label class="field field--full">
+            <span data-i18n="f_msg">Message (optional)</span>
+            <textarea name="message" rows="4" placeholder="Anything you want to add…"></textarea>
+          </label>
+
+          <div class="recaptcha" data-netlify-recaptcha="true"></div>
+
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit" data-i18n="send">Send</button>
+            <div class="form__note" data-i18n="note">Or email: info@barradarrewards.com • Call: +358 40 776 1589</div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="value">
+      <div class="container">
+        <div class="cards">
+          <div class="card">
+            <div class="card__icon">📍</div>
+            <h3 class="h3" data-i18n="c1_t">Appear first to nearby users</h3>
+            <p class="muted" data-i18n="c1_b">Your bar is shown based on user location — closest options first.</p>
+          </div>
+          <div class="card">
+            <div class="card__icon">🎡</div>
+            <h3 class="h3" data-i18n="c2_t">Drive traffic with Wheel of Fortune</h3>
+            <p class="muted" data-i18n="c2_b">Guests visit to spin — you only cover the wholesale cost of the prize.</p>
+          </div>
+          <div class="card">
+            <div class="card__icon">🍺</div>
+            <h3 class="h3" data-i18n="c3_t">Bring customers back with digital stamp cards</h3>
+            <p class="muted" data-i18n="c3_b">Collect stamps → unlock rewards → repeat visits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="footer__brand">BarRadar Rewards</div>
+          <div class="footer__small">© <span id="year"></span> • info@barradarrewards.com • +358 40 776 1589</div>
+        </div>
+        <div class="footer__right">
+          <a class="footer__link" href="#top" data-i18n="backtop">Back to top</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
