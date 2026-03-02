@@ -1,178 +1,16 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BarRadar Rewards — Early Partner Spots</title>
-  <meta name="description" content="Join BarRadar Rewards as an early partner — for free." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-
-<header class="topbar">
-  <div class="container topbar__inner">
-    <a class="brand" href="#top" aria-label="BarRadar Rewards">
-      <span class="brand__logoWrap">
-        <img class="brand__logo" src="assets/barradar-rewards-logo.png" alt="BarRadar Rewards logo" />
-      </span>
-    </a>
-
-    <!-- LANGUAGE SWITCH (VISIBLE) -->
-    <nav class="lang" aria-label="Language switch">
-      <button class="lang__btn is-active" type="button" data-lang="en">GB</button>
-      <button class="lang__btn" type="button" data-lang="es">ES</button>
-      <button class="lang__btn" type="button" data-lang="fi">FI</button>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
-
-  <section class="hero">
-    <div class="hero__bg"></div>
-    <div class="hero__glow"></div>
-
-    <div class="container hero__inner">
-
-      <div class="hero__copy">
-        <h1 class="h1">
-          <span data-i18n="hero_title_1">Get More Paying Customers</span>
-          <span class="accent">— <span data-i18n="hero_title_2">For Free</span></span>
-        </h1>
-
-        <p class="lead" data-i18n="hero_sub">
-          Join the first 10–15 bars before launch. No contracts. No fees. Zero risk.
-        </p>
-
-        <ul class="bullets">
-          <li><span class="check">✓</span> <span data-i18n="b1">Reach nearby customers automatically</span></li>
-          <li><span class="check">✓</span> <span data-i18n="b2">Only pay the wholesale cost of a prize drink</span></li>
-          <li><span class="check">✓</span> <span data-i18n="b3">We handle everything — you do nothing</span></li>
-        </ul>
-
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#contact" data-i18n="cta_btn">Secure your spot — FOR FREE!</a>
-          <div class="scarcity" data-i18n="scarcity">Only 15 early partner spots available</div>
-        </div>
-
-        <div class="trustline" data-i18n="trust">
-          You submit the form → I contact you → I visit your bar and set it up. Completely risk-free for you.
-        </div>
-      </div>
-
-      <div class="hero__visual">
-        <div class="phone">
-          <img class="phone__img" src="assets/app-nearby.png" alt="BarRadar Rewards app screen" />
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="container">
-
-      <div class="contact__title">
-        <h2 class="h2" data-i18n="contact_title">Interested? I’ll Visit Your Bar Personally.</h2>
-        <p class="muted" data-i18n="contact_sub">
-          Fill out the form and I’ll contact you directly. Completely risk-free.
-        </p>
-      </div>
-
-      <form id="earlyPartnerForm"
-            class="form"
-            name="early-partner"
-            method="POST"
-            data-netlify="true"
-            data-netlify-recaptcha="true"
-            netlify-honeypot="bot-field">
-
-        <input type="hidden" name="form-name" value="early-partner" />
-
-        <p class="hidden">
-          <label>Don’t fill this out: <input name="bot-field" /></label>
-        </p>
-
-        <div class="grid">
-          <label class="field">
-            <span data-i18n="f_bar">Bar name</span>
-            <input name="bar_name" type="text" required placeholder="Bar Malaga" />
-          </label>
-
-          <label class="field">
-            <span data-i18n="f_name">Your name</span>
-            <input name="name" type="text" required placeholder="Name" />
-          </label>
-
-          <label class="field">
-            <span data-i18n="f_phone">Phone</span>
-            <input name="phone" type="tel" required placeholder="+34 ..." />
-          </label>
-
-          <label class="field">
-            <span data-i18n="f_email">Email (optional)</span>
-            <input name="email" type="email" placeholder="name@bar.com" />
-          </label>
-        </div>
-
-        <label class="field field--full">
-          <span data-i18n="f_msg">Message (optional)</span>
-          <textarea name="message" rows="4" placeholder="Anything you want to add…"></textarea>
-        </label>
-
-        <div class="recaptcha" data-netlify-recaptcha="true"></div>
-
-        <div class="form__actions">
-          <button class="btn btn--primary" type="submit" data-i18n="send">Send</button>
-          <div class="form__note" data-i18n="note">Or email: info@barradarrewards.com • Call: +358 40 776 1589</div>
-        </div>
-      </form>
-
-    </div>
-  </section>
-
-</main>
-
-<script>
-/* ===== AJAX submit (no 404) ===== */
-document.getElementById("earlyPartnerForm").addEventListener("submit", async function(e){
-  e.preventDefault();
-  const form = e.target;
-  const data = new FormData(form);
-  const body = new URLSearchParams();
-  for (const [k, v] of data.entries()) body.append(k, v);
-
-  try {
-    const res = await fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: body.toString()
-    });
-    if (res.ok) window.location.href = "/thanks.html";
-    else alert("Submit failed. Please try again or email info@barradarrewards.com");
-  } catch {
-    alert("Network error. Please try again or email info@barradarrewards.com");
-  }
-});
-
-/* ===== Simple i18n ===== */
 const dict = {
   en: {
     hero_title_1:"Get More Paying Customers",
     hero_title_2:"For Free",
-    hero_sub:"Join the first 10–15 bars before launch. No contracts. No fees. Zero risk.",
-    b1:"Reach nearby customers automatically",
-    b2:"Only pay the wholesale cost of a prize drink",
-    b3:"We handle everything — you do nothing",
-    cta_btn:"Secure your spot — FOR FREE!",
-    scarcity:"Only 15 early partner spots available",
-    trust:"You submit the form → I contact you → I visit your bar and set it up. Completely risk-free for you.",
-    contact_title:"Interested? I’ll Visit Your Bar Personally.",
-    contact_sub:"Fill out the form and I’ll contact you directly. Completely risk-free.",
+    hero_sub:"Join the first 20 bars before the official launch and secure free visibility. No contracts. No fees. Zero risk.",
+    b1:"Appear first to nearby customers who are looking for a bar",
+    b2:"Acquire a new customer for the wholesale cost of one prize drink",
+    b3:"We handle everything – you don’t need to do anything",
+    cta_btn:"Secure your spot — FOR FREE",
+    scarcity:"Only 20 early partner spots available",
+    trust:"Leave your details – we handle the setup on-site. Completely risk-free.",
+    contact_title:"Interested? We’ll Visit Your Bar Personally.",
+    contact_sub:"Fill out the form and we’ll contact you directly.",
     f_bar:"Bar name",
     f_name:"Your name",
     f_phone:"Phone",
@@ -181,38 +19,40 @@ const dict = {
     send:"Send",
     note:"Or email: info@barradarrewards.com • Call: +358 40 776 1589"
   },
+
   fi: {
     hero_title_1:"Enemmän maksavia asiakkaita",
     hero_title_2:"ilmaiseksi",
-    hero_sub:"Liity mukaan ensimmäisten 10–15 baarin joukossa ennen julkaisua. Ei sopimuksia. Ei maksuja. Nollariski.",
-    b1:"Tavoita lähistön asiakkaat automaattisesti",
-    b2:"Maksat vain palkintojuoman sisäänostohinnan",
-    b3:"Me hoidamme kaiken — sinä et joudu säätämään",
-    cta_btn:"Varaa paikka — ILMAISEKSI!",
-    scarcity:"Vain 15 early partner -paikkaa tarjolla",
-    trust:"Täytät lomakkeen → minä otan yhteyttä → tulen paikan päälle ja laitan kaiken kuntoon. Täysin riskitöntä.",
-    contact_title:"Kiinnostaako? Tulen paikan päälle.",
-    contact_sub:"Täytä lomake ja otan sinuun yhteyttä suoraan. Täysin riskitöntä.",
+    hero_sub:"Liity mukaan ensimmäisten 20 baarin joukkoon ennen virallista julkaisua ja varmista ilmainen näkyvyys. Ei sopimuksia. Ei maksuja. Nollariski.",
+    b1:"Näy ensimmäisenä lähistön asiakkaille, jotka etsivät baaria",
+    b2:"Saat uuden asiakkaan yhden palkintojuoman tukkuhinnalla",
+    b3:"Me hoidamme kaiken – teidän ei tarvitse tehdä mitään",
+    cta_btn:"Varaa paikkasi – ILMAISEKSI",
+    scarcity:"Vain 20 early partner -paikkaa tarjolla",
+    trust:"Jättäkää yhteystiedot – hoidamme käyttöönoton paikan päällä. Täysin riskitöntä.",
+    contact_title:"Kiinnostaako? Tulemme paikan päälle.",
+    contact_sub:"Täytä lomake ja otamme sinuun yhteyttä suoraan.",
     f_bar:"Baarin nimi",
     f_name:"Nimi",
     f_phone:"Puhelin",
     f_email:"Sähköposti (valinnainen)",
     f_msg:"Viesti (valinnainen)",
     send:"Lähetä",
-    note:"Tai email: info@barradarrewards.com • Puhelin: +358 40 776 1589"
+    note:"Tai sähköposti: info@barradarrewards.com • Puhelin: +358 40 776 1589"
   },
+
   es: {
     hero_title_1:"Más clientes que pagan",
     hero_title_2:"gratis",
-    hero_sub:"Únete a los primeros 10–15 bares antes del lanzamiento. Sin contratos. Sin cuotas. Cero riesgo.",
-    b1:"Llega a clientes cercanos automáticamente",
-    b2:"Solo pagas el coste mayorista de la bebida premio",
-    b3:"Nosotros lo gestionamos todo — tú no haces nada",
-    cta_btn:"Reserva tu plaza — ¡GRATIS!",
-    scarcity:"Solo 15 plazas de partner early disponibles",
-    trust:"Rellenas el formulario → te contacto → voy a tu bar y lo configuro. Totalmente sin riesgo.",
-    contact_title:"¿Te interesa? Visito tu bar en persona.",
-    contact_sub:"Rellena el formulario y te contactaré directamente. Cero riesgo.",
+    hero_sub:"Únete a los primeros 20 bares antes del lanzamiento oficial y asegura visibilidad gratuita. Sin contratos. Sin cuotas. Cero riesgo.",
+    b1:"Aparece primero ante clientes cercanos que buscan un bar",
+    b2:"Consigue un nuevo cliente por el coste mayorista de una bebida premio",
+    b3:"Nosotros nos encargamos de todo – no tienes que hacer nada",
+    cta_btn:"Reserva tu plaza – ¡GRATIS!",
+    scarcity:"Solo 20 plazas early partner disponibles",
+    trust:"Déjanos tus datos – gestionamos la puesta en marcha en tu local. Totalmente sin riesgo.",
+    contact_title:"¿Te interesa? Visitamos tu bar en persona.",
+    contact_sub:"Rellena el formulario y nos pondremos en contacto contigo directamente.",
     f_bar:"Nombre del bar",
     f_name:"Tu nombre",
     f_phone:"Teléfono",
@@ -222,24 +62,3 @@ const dict = {
     note:"O email: info@barradarrewards.com • Tel: +358 40 776 1589"
   }
 };
-
-function setLang(lang){
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const key = el.getAttribute("data-i18n");
-    if (dict[lang] && dict[lang][key]) el.textContent = dict[lang][key];
-  });
-  document.querySelectorAll(".lang__btn").forEach(b=>{
-    b.classList.toggle("is-active", b.dataset.lang === lang);
-  });
-  localStorage.setItem("lang", lang);
-}
-
-document.querySelectorAll(".lang__btn").forEach(btn=>{
-  btn.addEventListener("click", ()=> setLang(btn.dataset.lang));
-});
-
-setLang(localStorage.getItem("lang") || "en");
-</script>
-
-</body>
-</html>
