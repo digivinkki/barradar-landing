@@ -16,28 +16,30 @@ a{color:inherit;text-decoration:none}
 .container{width:min(1120px,92vw);margin:0 auto}
 
 .topbar{
-  position:sticky;top:0;z-index:20;
-  background:linear-gradient(180deg, rgba(2,4,11,.92), rgba(2,4,11,.70));
-  backdrop-filter: blur(10px);
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:#02040b;
   border-bottom:1px solid rgba(120,170,255,.12);
 }
-.topbar__inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 
-/* Logo: bigger + crop white edges (if baked in) */
+.topbar__inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 0;
+}
+
 .brand__logoWrap{
   display:flex;
   align-items:center;
-  height:72px;              /* isompi */
-  overflow:hidden;
 }
 
 .brand__logo{
-  height:110px;             /* selvästi isompi */
+  height:64px;     /* siisti koko */
   width:auto;
-  transform:translateY(-18px); /* crop white frame pois */
-  filter:
-    drop-shadow(0 0 22px rgba(46,167,255,.35))
-    drop-shadow(0 8px 28px rgba(0,0,0,.65));
+  display:block;
+  filter: drop-shadow(0 0 14px rgba(46,167,255,.25));
 }
 
 .lang{display:flex;gap:10px}
