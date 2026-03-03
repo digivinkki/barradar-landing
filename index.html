@@ -1,22 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BarRadar Rewards — Early Partner Spots</title>
-<meta name="description" content="Join BarRadar Rewards as an early partner — for free." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BarRadar Rewards — Early Partner Spots</title>
+  <meta name="description" content="Join BarRadar Rewards as an early partner — for free." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
 <header class="topbar">
   <div class="container topbar__inner">
-    <img class="brand__logo" src="assets/barradar-rewards-logo.png" alt="BarRadar Rewards logo" />
-    <nav class="lang">
+    <a class="brand" href="#top" aria-label="BarRadar Rewards">
+      <span class="brand__logoWrap">
+        <img class="brand__logo" src="assets/barradar-rewards-logo.png" alt="BarRadar Rewards logo" />
+      </span>
+    </a>
+
+    <nav class="lang" aria-label="Language switch">
       <button class="lang__btn is-active" type="button" data-lang="en">GB</button>
       <button class="lang__btn" type="button" data-lang="es">ES</button>
       <button class="lang__btn" type="button" data-lang="fi">FI</button>
@@ -24,223 +29,302 @@
   </div>
 </header>
 
-<main>
+<main id="top">
 
-<section class="hero">
-<div class="hero__bg"></div>
-<div class="hero__glow"></div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__glow"></div>
 
-<div class="container hero__inner">
+    <div class="container hero__inner">
 
-<div class="hero__copy">
+      <div class="hero__copy">
 
-<!-- WHAT IS THIS -->
-<div class="hero__intro">
-<h2 class="h2" data-i18n="what_title">What is BarRadar Rewards?</h2>
-<p class="muted" data-i18n="what_text">
-A customer acquisition and loyalty app for bars. Users discover nearby bars, spin to win rewards and collect digital stamps. You only pay when a real customer wins.
-</p>
-</div>
+        <!-- WHAT IS THIS (SHORT) -->
+        <div class="hero__intro">
+          <h2 class="h2" data-i18n="what_title">What is BarRadar Rewards?</h2>
+          <p class="muted" data-i18n="what_text">
+            A customer acquisition and loyalty app for bars. Users discover nearby bars, spin to win rewards and collect digital stamps. You only pay when a real customer wins.
+          </p>
+        </div>
 
-<h1 class="h1">
-<span data-i18n="hero_title_1">Get More Paying Customers</span>
-<span class="accent">— <span data-i18n="hero_title_2">For Free</span></span>
-</h1>
+        <h1 class="h1">
+          <span data-i18n="hero_title_1">Get More Paying Customers</span>
+          <span class="accent">— <span data-i18n="hero_title_2">For Free</span></span>
+        </h1>
 
-<p class="lead" data-i18n="hero_sub">
-Join the first 20 bars before the official launch and secure free visibility. No contracts. No fees. Zero risk.
-</p>
+        <p class="lead" data-i18n="hero_sub">
+          Join the first 20 bars before the official launch and secure free visibility. No contracts. No fees. Zero risk.
+        </p>
 
-<ul class="bullets">
-<li><span class="check">✓</span> <span data-i18n="b1">Appear first to nearby customers who are looking for a bar</span></li>
-<li><span class="check">✓</span> <span data-i18n="b2">Acquire a new customer for the wholesale cost of one prize drink</span></li>
-<li><span class="check">✓</span> <span data-i18n="b3">We handle everything – you don’t need to do anything</span></li>
-<li><span class="check">✓</span> <span data-i18n="b4">Staff effort: show a QR for stamps, scan once for rewards — a few seconds</span></li>
-</ul>
+        <ul class="bullets">
+          <li><span class="check">✓</span> <span data-i18n="b1">Appear first to nearby customers who are looking for a bar</span></li>
+          <li><span class="check">✓</span> <span data-i18n="b2">Acquire a new customer for the wholesale cost of one prize drink</span></li>
+          <li><span class="check">✓</span> <span data-i18n="b3">We handle everything — you don’t need to do anything</span></li>
+          <li><span class="check">✓</span> <span data-i18n="b4">Staff effort: show a QR for stamps, scan once for rewards — a few seconds</span></li>
+        </ul>
 
-<div class="hero__cta">
-<a class="btn btn--primary" href="#contact" data-i18n="cta_btn">Secure your spot — FOR FREE</a>
-<div class="scarcity" data-i18n="scarcity">Only 20 early partner spots available</div>
-</div>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#contact" data-i18n="cta_btn">Secure your spot — FOR FREE!</a>
+          <div class="scarcity" data-i18n="scarcity">Only 20 early partner spots available</div>
+        </div>
 
-<div class="trustline" data-i18n="trust">
-Leave your details – we handle the setup on-site. Completely risk-free.
-</div>
+        <div class="trustline" data-i18n="trust">
+          Leave your details → I contact you → I visit your bar and set it up. Completely risk-free.
+        </div>
+      </div>
 
-</div>
+      <div class="hero__visual">
+        <div class="phone">
+          <img class="phone__img" src="assets/app-nearby.png" alt="BarRadar Rewards app screen" />
+        </div>
+      </div>
 
-<div class="hero__visual">
-<div class="phone">
-<img class="phone__img" src="assets/app-nearby.png" alt="App preview" />
-</div>
-</div>
+    </div>
+  </section>
 
-</div>
-</section>
+  <!-- HOW IT WORKS -->
+  <section class="value">
+    <div class="container">
+      <h2 class="h2" data-i18n="how_title">How It Works For Bars</h2>
 
-<!-- HOW IT WORKS -->
-<section class="value">
-<div class="container">
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon">📍</div>
+          <h3 class="h3" data-i18n="how_1_title">1. Customers Find You</h3>
+          <p class="muted" data-i18n="how_1_text">
+            Users see your bar in the app when they are nearby and looking for a place.
+          </p>
+        </div>
 
-<h2 class="h2" data-i18n="how_title">How It Works For Bars</h2>
+        <div class="card">
+          <div class="card__icon">🎁</div>
+          <h3 class="h3" data-i18n="how_2_title">2. They Play & Win</h3>
+          <p class="muted" data-i18n="how_2_text">
+            Customers spin the wheel and collect digital stamps. You only pay if someone wins a prize drink.
+          </p>
+        </div>
 
-<div class="cards">
+        <div class="card">
+          <div class="card__icon">📱</div>
+          <h3 class="h3" data-i18n="how_3_title">3. Staff Effort = Seconds</h3>
+          <p class="muted" data-i18n="how_3_text">
+            Show your QR when a customer buys a drink. Scan once when they redeem a reward. That’s it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="card">
-<div class="card__icon">📍</div>
-<h3 class="h3" data-i18n="how_1_title">1. Customers Find You</h3>
-<p class="muted" data-i18n="how_1_text">
-Users see your bar in the app when they are nearby and looking for a place.
-</p>
-</div>
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
 
-<div class="card">
-<div class="card__icon">🎁</div>
-<h3 class="h3" data-i18n="how_2_title">2. They Play & Win</h3>
-<p class="muted" data-i18n="how_2_text">
-Customers spin the wheel and collect digital stamps. You only pay if someone wins a prize drink.
-</p>
-</div>
+      <div class="contact__title">
+        <h2 class="h2" data-i18n="contact_title">Interested? I’ll Visit Your Bar Personally.</h2>
+        <p class="muted" data-i18n="contact_sub">
+          Fill out the form and I’ll contact you directly.
+        </p>
+      </div>
 
-<div class="card">
-<div class="card__icon">📱</div>
-<h3 class="h3" data-i18n="how_3_title">3. Staff Interaction = Seconds</h3>
-<p class="muted" data-i18n="how_3_text">
-Show your QR code when a customer buys a drink. Scan once when they redeem a reward. That’s it.
-</p>
-</div>
+      <form id="earlyPartnerForm"
+            class="form"
+            name="early-partner"
+            method="POST"
+            data-netlify="true"
+            data-netlify-recaptcha="true"
+            netlify-honeypot="bot-field">
 
-</div>
-</div>
-</section>
+        <input type="hidden" name="form-name" value="early-partner" />
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-<div class="container">
+        <p class="hidden">
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
 
-<h2 class="h2" data-i18n="contact_title">Interested? We’ll Visit Your Bar Personally.</h2>
-<p class="muted" data-i18n="contact_sub">
-Fill out the form and we’ll contact you directly.
-</p>
+        <div class="grid">
+          <label class="field">
+            <span data-i18n="f_bar">Bar name</span>
+            <input name="bar_name" type="text" required placeholder="Bar Malaga" />
+          </label>
 
-<form name="early-partner" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
-<input type="hidden" name="form-name" value="early-partner" />
-<p class="hidden"><input name="bot-field" /></p>
+          <label class="field">
+            <span data-i18n="f_name">Your name</span>
+            <input name="name" type="text" required placeholder="Name" />
+          </label>
 
-<div class="grid">
-<input name="bar_name" type="text" required placeholder="Bar name" />
-<input name="name" type="text" required placeholder="Your name" />
-<input name="phone" type="tel" required placeholder="Phone" />
-<input name="email" type="email" placeholder="Email (optional)" />
-</div>
+          <label class="field">
+            <span data-i18n="f_phone">Phone</span>
+            <input name="phone" type="tel" required placeholder="+34 ..." />
+          </label>
 
-<textarea name="message" rows="4" placeholder="Message (optional)"></textarea>
+          <label class="field">
+            <span data-i18n="f_email">Email (optional)</span>
+            <input name="email" type="email" placeholder="name@bar.com" />
+          </label>
+        </div>
 
-<div data-netlify-recaptcha="true"></div>
+        <label class="field field--full">
+          <span data-i18n="f_msg">Message (optional)</span>
+          <textarea name="message" rows="4" placeholder="Anything you want to add…"></textarea>
+        </label>
 
-<button class="btn btn--primary" type="submit" data-i18n="send">Send</button>
+        <div class="recaptcha" data-netlify-recaptcha="true"></div>
 
-</form>
+        <div class="form__actions">
+          <button class="btn btn--primary" type="submit" data-i18n="send">Send</button>
+          <div class="form__note" data-i18n="note">Or email: info@barradarrewards.com • Call: +358 40 776 1589</div>
+        </div>
 
-</div>
-</section>
+      </form>
+
+    </div>
+  </section>
 
 </main>
 
 <script>
+/* ===== AJAX submit (no 404) ===== */
+document.getElementById("earlyPartnerForm").addEventListener("submit", async function(e){
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  const body = new URLSearchParams();
+  for (const [k, v] of data.entries()) body.append(k, v);
+
+  try {
+    const res = await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: body.toString()
+    });
+    if (res.ok) window.location.href = "/thanks.html";
+    else alert("Submit failed. Please try again or email info@barradarrewards.com");
+  } catch {
+    alert("Network error. Please try again or email info@barradarrewards.com");
+  }
+});
+
+/* ===== i18n ===== */
 const dict = {
-en:{
-what_title:"What is BarRadar Rewards?",
-what_text:"A customer acquisition and loyalty app for bars. Users discover nearby bars, spin to win rewards and collect digital stamps. You only pay when a real customer wins.",
-hero_title_1:"Get More Paying Customers",
-hero_title_2:"For Free",
-hero_sub:"Join the first 20 bars before the official launch and secure free visibility. No contracts. No fees. Zero risk.",
-b1:"Appear first to nearby customers who are looking for a bar",
-b2:"Acquire a new customer for the wholesale cost of one prize drink",
-b3:"We handle everything – you don’t need to do anything",
-b4:"Staff effort: show a QR for stamps, scan once for rewards — a few seconds",
-cta_btn:"Secure your spot — FOR FREE",
-scarcity:"Only 20 early partner spots available",
-trust:"Leave your details – we handle the setup on-site. Completely risk-free.",
-how_title:"How It Works For Bars",
-how_1_title:"1. Customers Find You",
-how_1_text:"Users see your bar in the app when they are nearby and looking for a place.",
-how_2_title:"2. They Play & Win",
-how_2_text:"Customers spin the wheel and collect digital stamps. You only pay if someone wins a prize drink.",
-how_3_title:"3. Staff Interaction = Seconds",
-how_3_text:"Show your QR code when a customer buys a drink. Scan once when they redeem a reward. That’s it.",
-contact_title:"Interested? We’ll Visit Your Bar Personally.",
-contact_sub:"Fill out the form and we’ll contact you directly.",
-send:"Send"
-},
+  en: {
+    what_title:"What is BarRadar Rewards?",
+    what_text:"A customer acquisition and loyalty app for bars. Users discover nearby bars, spin to win rewards and collect digital stamps. You only pay when a real customer wins.",
 
-fi:{
-what_title:"Mikä on BarRadar Rewards?",
-what_text:"Asiakashankinta- ja kanta-asiakassovellus baareille. Käyttäjät löytävät lähibaarit, pyörittävät onnenpyörää ja keräävät digitaalisia leimoja. Maksat vain toteutuneesta palkinnosta.",
-hero_title_1:"Enemmän maksavia asiakkaita",
-hero_title_2:"ilmaiseksi",
-hero_sub:"Liity mukaan ensimmäisten 20 baarin joukkoon ennen virallista julkaisua. Ei sopimuksia. Ei maksuja. Nollariski.",
-b1:"Näy ensimmäisenä lähistön asiakkaille",
-b2:"Saat uuden asiakkaan yhden palkintojuoman tukkuhinnalla",
-b3:"Me hoidamme kaiken – teidän ei tarvitse tehdä mitään",
-b4:"Henkilökunnalta vain muutama sekunti",
-cta_btn:"Varaa paikkasi – ILMAISEKSI",
-scarcity:"Vain 20 paikkaa tarjolla",
-trust:"Jättäkää yhteystiedot – hoidamme kaiken paikan päällä.",
-how_title:"Miten tämä toimii baarille",
-how_1_title:"1. Asiakkaat löytävät teidät",
-how_1_text:"Käyttäjät näkevät baarinne sovelluksessa lähistöllä.",
-how_2_title:"2. He pelaavat ja voittavat",
-how_2_text:"Asiakkaat pyörittävät onnenpyörää ja keräävät leimoja.",
-how_3_title:"3. Henkilökunnalta sekunteja",
-how_3_text:"Näytä QR, skannaa lunastus – siinä kaikki.",
-contact_title:"Kiinnostaako? Tulemme paikan päälle.",
-contact_sub:"Täytä lomake ja otamme yhteyttä.",
-send:"Lähetä"
-},
+    hero_title_1:"Get More Paying Customers",
+    hero_title_2:"For Free",
+    hero_sub:"Join the first 20 bars before the official launch and secure free visibility. No contracts. No fees. Zero risk.",
+    b1:"Appear first to nearby customers who are looking for a bar",
+    b2:"Acquire a new customer for the wholesale cost of one prize drink",
+    b3:"We handle everything — you don’t need to do anything",
+    b4:"Staff effort: show a QR for stamps, scan once for rewards — a few seconds",
+    cta_btn:"Secure your spot — FOR FREE!",
+    scarcity:"Only 20 early partner spots available",
+    trust:"Leave your details → I contact you → I visit your bar and set it up. Completely risk-free.",
 
-es:{
-what_title:"¿Qué es BarRadar Rewards?",
-what_text:"Una app de captación y fidelización para bares. Los usuarios descubren bares cercanos, giran la ruleta y coleccionan sellos digitales. Solo pagas cuando un cliente real gana.",
-hero_title_1:"Más clientes que pagan",
-hero_title_2:"gratis",
-hero_sub:"Únete a los primeros 20 bares antes del lanzamiento oficial. Sin contratos. Sin cuotas. Cero riesgo.",
-b1:"Aparece primero ante clientes cercanos",
-b2:"Consigue un cliente por el coste mayorista de una bebida premio",
-b3:"Nos encargamos de todo",
-b4:"El personal tarda solo segundos",
-cta_btn:"Reserva tu plaza – ¡GRATIS!",
-scarcity:"Solo 20 plazas disponibles",
-trust:"Déjanos tus datos – gestionamos todo en tu local.",
-how_title:"Cómo funciona para bares",
-how_1_title:"1. Los clientes te encuentran",
-how_1_text:"Tu bar aparece en la app cuando están cerca.",
-how_2_title:"2. Juegan y ganan",
-how_2_text:"Giran la ruleta y coleccionan sellos.",
-how_3_title:"3. El personal tarda segundos",
-how_3_text:"Mostrar QR y escanear al canjear.",
-contact_title:"¿Te interesa? Visitamos tu bar.",
-contact_sub:"Rellena el formulario y te contactamos.",
-send:"Enviar"
-}
+    how_title:"How It Works For Bars",
+    how_1_title:"1. Customers Find You",
+    how_1_text:"Your bar appears in the app when people nearby are deciding where to go.",
+    how_2_title:"2. They participate and earn rewards",
+    how_2_text:"Customers win rewards and visit your bar to redeem them. Digital stamps drive repeat visits. Your cost remains minimal — essentially the wholesale price of one drink.",
+    how_3_title:"3. Staff Effort = Seconds",
+    how_3_text:"No systems or integrations required. Simply display your QR code and scan once — that’s it.",
+
+    contact_title:"Interested? I’ll Visit Your Bar Personally.",
+    contact_sub:"Fill out the form and I’ll contact you directly.",
+    f_bar:"Bar name",
+    f_name:"Your name",
+    f_phone:"Phone",
+    f_email:"Email (optional)",
+    f_msg:"Message (optional)",
+    send:"Send",
+    note:"Or email: info@barradarrewards.com • Call: +358 40 776 1589"
+  },
+
+  fi: {
+    what_title:"Mikä on BarRadar Rewards?",
+    what_text:"Asiakashankinta- ja kanta-asiakassovellus baareille. Käyttäjät löytävät lähibaarit, pyörittävät onnenpyörää ja keräävät digitaalisia leimoja. Maksat vain toteutuneesta palkinnosta.",
+
+    hero_title_1:"Enemmän maksavia asiakkaita",
+    hero_title_2:"ilmaiseksi",
+    hero_sub:"Liity mukaan ensimmäisten 20 baarin joukkoon ennen virallista julkaisua ja varmista ilmainen näkyvyys. Ei sopimuksia. Ei maksuja. Nollariski.",
+    b1:"Näy ensimmäisenä lähistön asiakkaille, jotka etsivät baaria",
+    b2:"Saat uuden asiakkaan yhden palkintojuoman tukkuhinnalla",
+    b3:"Me hoidamme kaiken — teidän ei tarvitse tehdä mitään",
+    b4:"Henkilökunnalta: näytä QR leimoihin, skannaa kerran lunastuksessa — muutama sekunti",
+    cta_btn:"Varaa paikkasi — ILMAISEKSI!",
+    scarcity:"Vain 20 early partner -paikkaa tarjolla",
+    trust:"Jättäkää yhteystiedot – hoidamme kaiken paikan päällä.",
+
+    how_title:"Miten tämä toimii baarille",
+    how_1_title:"1. Asiakkaat löytävät teidät",
+    how_1_text:"Käyttäjät näkevät baarinne sovelluksessa, kun he etsivät vaihtoehtoja minne mennä lähistöllä.",
+    how_2_title:"2. He osallistuvat ja saavat palkintoja",
+    how_2_text:"Asiakkaat voittavat palkintoja onnenpyörästä ja saapuvat lunastamaan ne paikan päälle. Digitaaliset leimat sitouttavat heidät palaamaan. Baarille kustannus on minimaalinen – käytännössä yhden juoman tukkuhinta.",
+    how_3_title:"3. Henkilökunnalta vain muutama sekunti",
+    how_3_text:"Käyttöönotto ei vaadi järjestelmiä tai integraatioita. QR esiin ja yksi skannaus – siinä kaikki.",
+
+    contact_title:"Kiinnostaako? Tulen paikan päälle.",
+    contact_sub:"Täytä lomake ja otan sinuun yhteyttä suoraan.",
+    f_bar:"Baarin nimi",
+    f_name:"Nimi",
+    f_phone:"Puhelin",
+    f_email:"Sähköposti (valinnainen)",
+    f_msg:"Viesti (valinnainen)",
+    send:"Lähetä",
+    note:"Tai sähköposti: info@barradarrewards.com • Puhelin: +358 40 776 1589"
+  },
+
+  es: {
+    what_title:"¿Qué es BarRadar Rewards?",
+    what_text:"Una app de captación y fidelización para bares. Los usuarios descubren bares cercanos, giran la ruleta y coleccionan sellos digitales. Solo pagas cuando un cliente real gana.",
+
+    hero_title_1:"Más clientes que pagan",
+    hero_title_2:"gratis",
+    hero_sub:"Únete a los primeros 20 bares antes del lanzamiento oficial y asegura visibilidad gratuita. Sin contratos. Sin cuotas. Cero riesgo.",
+    b1:"Aparece primero ante clientes cercanos que buscan un bar",
+    b2:"Consigue un nuevo cliente por el coste mayorista de una bebida premio",
+    b3:"Nosotros lo gestionamos todo — tú no haces nada",
+    b4:"Para el personal: mostrar el QR para sellos, escanear una vez al canjear — unos segundos",
+    cta_btn:"Reserva tu plaza — ¡GRATIS!",
+    scarcity:"Solo 20 plazas early partner disponibles",
+    trust:"Deja tus datos → te contacto → voy a tu bar y lo configuro. Totalmente sin riesgo.",
+
+    how_title:"Cómo Funciona Para Bares",
+    how_1_title:"1. Los clientes te encuentran",
+    how_1_text:"Tu bar aparece en la app cuando clientes cercanos están eligiendo dónde ir.",
+    how_2_title:"2. Participan y obtienen recompensas",
+    how_2_text:"Los clientes ganan premios y visitan tu bar para canjearlos. Los sellos digitales impulsan visitas repetidas. El coste para el bar es mínimo — prácticamente el precio mayorista de una bebida.",
+    how_3_title:"3. El personal tarda segundos",
+    how_3_text:"No requiere sistemas ni integraciones. Solo muestra el código QR y realiza un escaneo — eso es todo.",
+
+    contact_title:"¿Te interesa? Visito tu bar en persona.",
+    contact_sub:"Rellena el formulario y te contactaré directamente.",
+    f_bar:"Nombre del bar",
+    f_name:"Tu nombre",
+    f_phone:"Teléfono",
+    f_email:"Email (opcional)",
+    f_msg:"Mensaje (opcional)",
+    send:"Enviar",
+    note:"O email: info@barradarrewards.com • Tel: +358 40 776 1589"
+  }
 };
 
 function setLang(lang){
-document.querySelectorAll("[data-i18n]").forEach(el=>{
-const key = el.getAttribute("data-i18n");
-if(dict[lang][key]) el.textContent = dict[lang][key];
-});
-document.querySelectorAll(".lang__btn").forEach(b=>{
-b.classList.toggle("is-active", b.dataset.lang === lang);
-});
-localStorage.setItem("lang", lang);
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    if (dict[lang] && dict[lang][key]) el.textContent = dict[lang][key];
+  });
+  document.querySelectorAll(".lang__btn").forEach(b=>{
+    b.classList.toggle("is-active", b.dataset.lang === lang);
+  });
+  localStorage.setItem("lang", lang);
 }
 
 document.querySelectorAll(".lang__btn").forEach(btn=>{
-btn.addEventListener("click", ()=> setLang(btn.dataset.lang));
+  btn.addEventListener("click", ()=> setLang(btn.dataset.lang));
 });
 
-setLang("en");
+setLang(localStorage.getItem("lang") || "en");
 </script>
 
 </body>
