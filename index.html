@@ -17,9 +17,7 @@
   <div class="container topbar__inner">
     <a class="brand" href="#top" aria-label="BarRadar Rewards">
       <span class="brand__logoWrap">
-        <video class="phone__img" autoplay muted loop playsinline>
-          <source src="assets/0308.mp4" type="video/mp4">
-        </video>
+        <img class="brand__logo" src="assets/barradar-rewards-logo.png" alt="BarRadar Rewards logo" />
       </span>
     </a>
 
@@ -42,7 +40,6 @@
 
       <div class="hero__copy">
 
-        <!-- WHAT IS THIS (SHORT) -->
         <div class="hero__intro">
           <h2 class="h2" data-i18n="what_title">What is BarRadar Rewards?</h2>
           <p class="muted" data-i18n="what_text">
@@ -77,7 +74,9 @@
 
       <div class="hero__visual">
         <div class="phone">
-          <img class="phone__img" src="assets/app-nearby.png" alt="BarRadar Rewards app screen" />
+          <video class="phone__video" autoplay muted loop playsinline poster="assets/app-nearby.png">
+            <source src="assets/0308.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
 
@@ -184,7 +183,6 @@
 </main>
 
 <script>
-/* ===== AJAX submit (no 404) ===== */
 document.getElementById("earlyPartnerForm").addEventListener("submit", async function(e){
   e.preventDefault();
   const form = e.target;
@@ -205,7 +203,6 @@ document.getElementById("earlyPartnerForm").addEventListener("submit", async fun
   }
 });
 
-/* ===== i18n ===== */
 const dict = {
   en: {
     what_title:"What is BarRadar Rewards?",
