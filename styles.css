@@ -256,3 +256,40 @@ a{color:inherit;text-decoration:none}
   }
 
 }
+.store-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.store-links__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.store-links__item:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+.store-links__item img {
+  display: block;
+  height: 52px;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .store-links {
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .store-links__item img {
+    height: 46px;
+  }
+}
