@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script>
+    const android = "https://play.google.com/store/apps/details?id=com.mycompany.barradarrewards";
+    const ios = "https://apps.apple.com/us/app/barradar-rewards/id6759228505";
+
+    const ua = navigator.userAgent;
+
+    if (/android/i.test(ua)) {
+      window.location.replace(android);
+    } else if (/iPhone|iPad|iPod/i.test(ua)) {
+      window.location.replace(ios);
+    } else {
+      window.location.replace(android);
+    }
+  </script>
+</head>
+<body></body>
+</html>
